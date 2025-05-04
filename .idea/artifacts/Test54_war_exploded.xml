@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Test54:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Test54_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Test54" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.20" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-api:8.5.88" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.16" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.3.20" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.7" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.30" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.20" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.30" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.20" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.5.88" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.25" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Test54/web/Web" />
+    </root>
+  </artifact>
+</component>
