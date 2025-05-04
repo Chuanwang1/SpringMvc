@@ -28,28 +28,28 @@ public class ActivityRegistrationDaoImpl implements ActivityRegistrationDao {
         }
     };
 
-    //鏌ユ壘鎵�鏈夋椿鍔ㄦ姤鍚?
+    //查找所有活动报??
     @Override
     public List<ActivityRegistration> findAllActivityRegistration() {
         String ActivityRegistrationSql = "select * from activity_registration";
         return jdbcTemplate.query(ActivityRegistrationSql, ActivetyRegistrationMapper);
     }
 
-    //鏍规嵁娲诲姩id鏌ユ壘娲诲姩鎶ュ悕
+    //根据活动id查找活动报名
     @Override
     public List<ActivityRegistration> findByActivityIdActivityRegistration(Integer activityId) {
         String ActivityRegistrationSql = "select * from activity_registration where activity_id = ?";
         return jdbcTemplate.query(ActivityRegistrationSql, ActivetyRegistrationMapper, activityId);
     }
 
-    //鏍规嵁瀛︾敓id鏌ユ壘娲诲姩鎶ュ悕
+    //根据学生id查找活动报名
     @Override
     public List<ActivityRegistration> findByStudentIdActivityRegistration(Integer studentId) {
         String ActivityRegistrationSql = "select * from activity_registration where student_id = ?";
         return jdbcTemplate.query(ActivityRegistrationSql, ActivetyRegistrationMapper, studentId);
     }
 
-    //鍒ゆ柇瀛︾敓鏄惁宸茬粡鎶ュ悕鏌愭椿锟??
+    //判断学生是否已经报名某活???
     @Override
     public boolean isRegisteredActivityRegistration(Integer activityId, Integer studentId) {
         String ActivityRegistrationSql = "select * from activity_registration where activity_id = ? and student_id = ?";
@@ -60,7 +60,7 @@ public class ActivityRegistrationDaoImpl implements ActivityRegistrationDao {
         return list != null && !list.isEmpty();
     }
 
-    //淇濆瓨娲诲姩鎶ュ悕
+    //保存活动报名
     @Override
     public int saveActivityRegistration(ActivityRegistration registration) {
         String sql = "INSERT INTO activity_registration(activity_id, student_id, register_time) VALUES(?, ?, ?)";
@@ -70,21 +70,21 @@ public class ActivityRegistrationDaoImpl implements ActivityRegistrationDao {
                 registration.getRegister_time());
     }
 
-    //鍒犻櫎娲诲姩鎶ュ悕
+    //删除活动报名
     @Override
     public int deleteActivityRegistration(Integer id) {
         String ActivityRegistrationSql = "delete from activity_registration where id = ?";
         return jdbcTemplate.update(ActivityRegistrationSql, id);
     }
 
-    //鏍规嵁娲诲姩id鍒犻櫎娲诲姩鎶ュ悕
+    //根据活动id删除活动报名
     @Override
     public int deleteByActivityIdActivityRegistration(Integer activityId) {
         String sql = "DELETE FROM activity_registration WHERE activity_id = ?";
         return jdbcTemplate.update(sql, activityId);
     }
 
-    //鏍规嵁瀛︾敓id鍒犻櫎娲诲姩鎶ュ悕
+    //根据学生id删除活动报名
     @Override
     public int deleteByStudentIdActivityRegistration(Integer studentId) {
         String sql = "DELETE FROM activity_registration WHERE student_id = ?";
